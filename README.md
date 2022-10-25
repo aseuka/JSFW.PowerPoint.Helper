@@ -16,6 +16,7 @@ PPT 헬퍼
 - 이미지 등록
  : 사용할 이미지를 드랍
  : 이미지의 우측하단 모서리에 마우스를 올리고 드래그하여 사이즈 조정
+ : 키보드 방향키로 사이즈 조정
 ![image](https://user-images.githubusercontent.com/116536524/197662832-e2f9bfb1-eefd-4358-b5dd-aa9e5fdb2653.png)
 
 
