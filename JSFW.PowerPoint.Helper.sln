@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSFW.PowerPoint.Helper", "JSFW.PowerPoint.Helper\JSFW.PowerPoint.Helper.csproj", "{5B17C22C-595B-42AE-A4CB-42BE8EF83AFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B17C22C-595B-42AE-A4CB-42BE8EF83AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B17C22C-595B-42AE-A4CB-42BE8EF83AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B17C22C-595B-42AE-A4CB-42BE8EF83AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B17C22C-595B-42AE-A4CB-42BE8EF83AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C4B837C-E46C-4255-A99C-5444A99D2AA6}
+	EndGlobalSection
+EndGlobal

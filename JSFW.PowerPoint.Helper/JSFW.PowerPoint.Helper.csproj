@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B17C22C-595B-42AE-A4CB-42BE8EF83AFA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JSFW.PowerPoint.Helper</RootNamespace>
+    <AssemblyName>JSFW.PowerPoint.Helper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CallToDelayOnTriggerClass.cs" />
+    <Compile Include="Contents\Controls\AddImageFileContentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contents\Controls\AddImageFileContentForm.Designer.cs">
+      <DependentUpon>AddImageFileContentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\Controls\ContentThumbnailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contents\Controls\ContentThumbnailControl.Designer.cs">
+      <DependentUpon>ContentThumbnailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\Controls\ContentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contents\Controls\ContentView.Designer.cs">
+      <DependentUpon>ContentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\Controls\ControlViewPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contents\Controls\ControlViewPanel.Designer.cs">
+      <DependentUpon>ControlViewPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\Label\LabelView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contents\Label\LabelView.Designer.cs">
+      <DependentUpon>LabelView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\Label\LabelViewsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contents\Label\LabelViewsPanel.Designer.cs">
+      <DependentUpon>LabelViewsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPT_COM_EX.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Contents\Controls\AddImageFileContentForm.resx">
+      <DependentUpon>AddImageFileContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contents\Controls\ContentThumbnailControl.resx">
+      <DependentUpon>ContentThumbnailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contents\Controls\ContentView.resx">
+      <DependentUpon>ContentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contents\Controls\ControlViewPanel.resx">
+      <DependentUpon>ControlViewPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contents\Label\LabelViewsPanel.resx">
+      <DependentUpon>LabelViewsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contents\Label\LabelView.resx">
+      <DependentUpon>LabelView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Category\Controls\ArrowDownGray.PNG" />
+    <Content Include="Category\Controls\ArrowDownRed.PNG" />
+    <Content Include="Category\Controls\ArrowLeftGray.PNG" />
+    <Content Include="Category\Controls\ArrowLeftRed.PNG" />
+    <Content Include="Category\Controls\ArrowRightGray.PNG" />
+    <Content Include="Category\Controls\ArrowRightRed.PNG" />
+    <Content Include="Category\Controls\ArrowUPGray.PNG" />
+    <Content Include="Category\Controls\ArrowUPRed.PNG" />
+    <Content Include="Category\Controls\Calendar.PNG" />
+    <Content Include="Category\Controls\Chart_Bar.PNG" />
+    <Content Include="Category\Controls\Chart_Circle.PNG" />
+    <Content Include="Category\Controls\Chart_Circle01.PNG" />
+    <Content Include="Category\Controls\Chart_Gauge01.PNG" />
+    <Content Include="Category\Controls\Chart_Gauge02.PNG" />
+    <Content Include="Category\Controls\Chart_Line.PNG" />
+    <Content Include="Category\Controls\Chart_LineBar.PNG" />
+    <Content Include="Category\Controls\CheckBox_Check.PNG" />
+    <Content Include="Category\Controls\CheckBox_UnCheck.PNG" />
+    <Content Include="Category\Controls\CodeFinderCode.PNG" />
+    <Content Include="Category\Controls\CodeFinderFull.PNG" />
+    <Content Include="Category\Controls\ComboBox.PNG" />
+    <Content Include="Category\Controls\DataGrid01.PNG" />
+    <Content Include="Category\Controls\DataGrid02.PNG" />
+    <Content Include="Category\Controls\Form.PNG" />
+    <Content Include="Category\Controls\HHmm.PNG" />
+    <Content Include="Category\Controls\Image.PNG" />
+    <Content Include="Category\Controls\Label.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\LL.PNG" />
+    <None Include="Resources\CC.PNG" />
+    <None Include="Resources\RR.PNG" />
+    <None Include="Resources\TT.PNG" />
+    <None Include="Resources\MM.PNG" />
+    <None Include="Resources\BB.PNG" />
+    <Content Include="Category\Controls\ListBox.PNG" />
+    <Content Include="Category\Controls\MsgBox.PNG" />
+    <Content Include="Category\Controls\NumberTextBox.PNG" />
+    <Content Include="Category\Controls\Num_Red_01.PNG" />
+    <Content Include="Category\Controls\Num_Red_05.PNG" />
+    <Content Include="Category\Controls\Num_Red_06.PNG" />
+    <Content Include="Category\Controls\Num_Red_07.PNG" />
+    <Content Include="Category\Controls\Num_Red_11.PNG" />
+    <Content Include="Category\Controls\OnOffButton.PNG" />
+    <Content Include="Category\Controls\OnOff_OffButton.PNG" />
+    <Content Include="Category\Controls\OnOff_OffButton01.PNG" />
+    <Content Include="Category\Controls\OnOff_ONButton.PNG" />
+    <Content Include="Category\Controls\OnOff_ONButton01.PNG" />
+    <Content Include="Category\Controls\Paging.PNG" />
+    <Content Include="Category\Controls\Player.PNG" />
+    <Content Include="Category\Controls\Progress01.PNG" />
+    <Content Include="Category\Controls\Progress02.PNG" />
+    <Content Include="Category\Controls\RadioCheck.PNG" />
+    <Content Include="Category\Controls\RadioUnCheck.PNG" />
+    <Content Include="Category\Controls\TabTitleSelect.PNG" />
+    <Content Include="Category\Controls\TabTitleUnSelect.PNG" />
+    <Content Include="Category\Controls\TextBox001.PNG" />
+    <Content Include="Category\Controls\TrackBar40.PNG" />
+    <Content Include="Category\Controls\TrackBar60.PNG" />
+    <Content Include="Category\Controls\TrackBar92.PNG" />
+    <Content Include="Category\Controls\X01.PNG" />
+    <Content Include="Category\Controls\X02.PNG" />
+    <Content Include="Category\Controls\X03.PNG" />
+    <Content Include="Category\Controls\X04.PNG" />
+    <Content Include="Category\Controls\X05.PNG" />
+    <Content Include="Category\Controls\YYYY.PNG" />
+    <Content Include="Category\Controls\YYYY01.PNG" />
+    <Content Include="Category\Controls\YYYYMM.PNG" />
+    <Content Include="Category\Controls\YYYYMM01.PNG" />
+    <Content Include="Category\Controls\YYYYMMDD.PNG" />
+    <Content Include="Category\Controls\YYYYMMDD01.PNG" />
+    <Content Include="작업내역.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
