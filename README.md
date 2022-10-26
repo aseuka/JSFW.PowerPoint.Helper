@@ -19,6 +19,6 @@ PPT 헬퍼
  : 키보드 방향키로 사이즈 조정</br>
 ![image](https://user-images.githubusercontent.com/116536524/197662832-e2f9bfb1-eefd-4358-b5dd-aa9e5fdb2653.png)
 
-
-- 유튜브
-https://www.youtube.com/watch?v=FkDQu_VJbvA
+- 유튜브 영상<br />
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/FkDQu_VJbvA/0.jpg)](https://youtu.be/FkDQu_VJbvA?t=0s)
+ 
