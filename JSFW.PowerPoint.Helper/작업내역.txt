@@ -45,3 +45,19 @@
 
 - 감사합니다. 
 
+
+ # 2024-09-12  (( 오류 수정 ))
+ 1. 이미지 드랍했더니 이미지가 안보인채 공백으로 나옴.
+    :: shape.Fill.Visible = MsoTriState.msoFalse; // 배경색 없음. 
+	:: 이거 설정하면 지워진다고 한다. 
+	:: 2017에선 왜? 보였을까? 버전차이라는데... 
+
+ 2. 1을 디버깅 하려고 켰더니... 아래처럼 나온다.
+ *예외 메세지 :
+    80080005 서버 실행이 실패했습니다. (예외가 발생한 HRESULT: 0x80080005 (CO_E_SERVER_EXEC_FAILURE)) 
+ 오류로 인해 CLSID가 {91493441-5A91-11CF-8700-00AA0060263B}인 구성 요소의 COM 클래스 팩터리를 검색하지 못했습니다. 
+
+처리 방법 :
+    VS를 관리자 모드가 아닌채 실행! 
+ 3. 컨트롤들을 드랍을 했더니.. 빈공백 텍스트 박스가 떠서...
+	DoDragDrop(string.Empty, DragDropEffects.Move); ===>  DoDragDrop(shape, DragDropEffects.Move);  

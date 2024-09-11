@@ -117,13 +117,18 @@ namespace JSFW.PowerPoint.Helper.Contents.Controls
                             //string guid = Guid.NewGuid().ToString("N").Replace("-", "");
                             shape = slide.Shapes.AddShape(MsoAutoShapeType.msoShapeRoundedRectangle, 0f, 1.6f, PPT_COM_EX.PixelsToPoints(this.Width), PPT_COM_EX.PixelsToPoints(this.Height));
                             shape.Visible = MsoTriState.msoFalse;
+                             
+                            string pic = System.IO.Path.GetFullPath(ImageInfo.Path);
+                            shape.Fill.UserPicture(pic);
 
                             shape.Adjustments[1] = 0.02f;// 0.5는 엄청 둥그렇게 나옴... 0.16 이 기본값! 둥근상자 초기값.
-                            shape.Fill.Visible = MsoTriState.msoFalse; // 배경색 없음. 
+                            if (string.IsNullOrWhiteSpace(pic) &&
+                                !System.IO.File.Exists(pic))
+                            {
+                                shape.Fill.Visible = MsoTriState.msoFalse; // 배경색 없음. 
+                            }
                             shape.Line.Visible = MsoTriState.msoFalse; // 외곽선 없음.
-                            
-                            shape.TextFrame.TextRange.Font.Color.RGB = ColorTranslator.ToOle(Color.FromArgb(10, Color.Red)); // 글자색
-
+                             
                             //shape.Name = $"{guid}";
                             Debug.WriteLine("Shape.Name=" + shape.Name);
 
@@ -131,12 +136,10 @@ namespace JSFW.PowerPoint.Helper.Contents.Controls
                             txtRng.Text = "";
                             txtRng.Font.Name = "맑은 고딕";
                             txtRng.Font.Size = 9f;
+                            txtRng.Font.Color.RGB = ColorTranslator.ToOle(Color.FromArgb(10, Color.Red)); // 글자색
                             txtRng.ParagraphFormat.Alignment = PpParagraphAlignment.ppAlignCenter; 
-
-                            string pic = System.IO.Path.GetFullPath(ImageInfo.Path);
-                            shape.Fill.UserPicture(pic);
-
-                            DoDragDrop(string.Empty, DragDropEffects.Move);
+                            
+                            DoDragDrop(shape, DragDropEffects.Move);
 
                             var point = PPT_COM_EX.GetCursorPosition(app.ActiveWindow.HWND);
                             var convertedPoint = PPT_COM_EX.ConvertScreenPointToSlideCoordinates(point, app);

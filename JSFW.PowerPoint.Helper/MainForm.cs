@@ -11,6 +11,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/*
+ *예외 메세지 :
+    80080005 서버 실행이 실패했습니다. (예외가 발생한 HRESULT: 0x80080005 (CO_E_SERVER_EXEC_FAILURE)) 
+ 오류로 인해 CLSID가 {91493441-5A91-11CF-8700-00AA0060263B}인 구성 요소의 COM 클래스 팩터리를 검색하지 못했습니다. 
+
+처리 방법 :
+    VS를 관리자 모드가 아닌채 실행! 
+*/
+
 
 namespace JSFW.PowerPoint.Helper
 {
