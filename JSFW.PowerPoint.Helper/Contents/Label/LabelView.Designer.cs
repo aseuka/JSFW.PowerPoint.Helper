@@ -34,9 +34,9 @@ namespace JSFW.PowerPoint.Helper.Contents.Label
             // LabelView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Name = "LabelView";
-            this.Size = new System.Drawing.Size(157, 20);
+            this.Size = new System.Drawing.Size(159, 22);
             this.ResumeLayout(false);
 
         }

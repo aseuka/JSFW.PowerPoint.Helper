@@ -103,7 +103,9 @@ namespace JSFW.PowerPoint.Helper.Contents.Label
                             fontSize = cboFontSize.Text;
                         }
 
-                        lv.SetData(kor, eng, requiredMode, align, fontSize);                       
+                        lv.Height = 28;
+
+                        lv.SetData(kor, eng, requiredMode, align, fontSize, lineTypeSettingView1.ShapeType, lineTypeSettingView1.Weight);                       
                         f.Controls.Add(lv);
                     }
                 }
@@ -152,6 +154,12 @@ namespace JSFW.PowerPoint.Helper.Contents.Label
         {
             isAppling = false;
             Clear();
-        } 
+        }
+
+        private void lineTypeSettingView1_ValueChanged(object sender, EventArgs e)
+        {
+            isAppling = false;
+            Clear();
+        }
     }
 }

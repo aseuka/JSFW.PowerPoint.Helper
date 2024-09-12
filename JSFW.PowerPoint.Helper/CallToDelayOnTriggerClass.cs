@@ -34,7 +34,6 @@ namespace JSFW.PowerPoint.Helper
             {
                 TriggerAction = new Action(() =>
                 {
-
                     while (DateTime.Now.AddSeconds(-DelayTime) < CalledTime)
                     {
                         Thread.Sleep(100);

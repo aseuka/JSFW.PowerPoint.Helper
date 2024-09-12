@@ -96,6 +96,15 @@
     <Compile Include="Contents\Label\LabelViewsPanel.Designer.cs">
       <DependentUpon>LabelViewsPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contents\Label\LineTypeSettingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contents\Label\LineTypeSettingView.Designer.cs">
+      <DependentUpon>LineTypeSettingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\Label\rdoShapeType.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\Label.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -125,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contents\Label\LabelView.resx">
       <DependentUpon>LabelView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contents\Label\LineTypeSettingView.resx">
+      <DependentUpon>LineTypeSettingView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
